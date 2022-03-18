@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        .accordion {
+        background-color: rgb(202, 211, 250);
+        color: rgb(47, 57, 197);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      body{
+        background-color: rgb(86, 116, 199);
+      }
+      .active, .accordion:hover {
+        background-color: rgb(135, 145, 194); 
+      }
+      
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+      </style>
+</head>
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul>
+      <li>Waterfall</li>
+      <li>Iterative</li>
+      <li>Prototyping</li>
+      <li>Spiral</li>
+      <li>V-shape</li>
+      <li>Agile</li>
+      <button class="accordion">Waterfall</button>
+<div class="panel">
+  <p>The waterfall model is one of the best known and oldest software development methods, named after the analogy of successive waterfalls - water falls from one level to the next and does not return..</p>
+  <ul>
+      <li>This model is used only when the requirements are very well known, clear and fixed.</li>
+      <li>Product definition is stable.</li>
+      <li>Technology is understood.</li>
+      <li>There are no ambiguous requirements.</li>
+      <li>Ample resources with required expertise are available freely.</li>
+      <li>The project is short.</li>
+      <h2>Advantages</h2>
+      <ol>
+      <li>Before the next phase of development, each phase must be completed</li>
+      
+    <li>Suited for smaller projects where requirements are well defined</li>
+    </ol>
+      <h2>Dis-advantages</h2>
+      <ol>
+        <li>Error can be fixed only during the phase</li>
+      
+      <li>It is not desirable for complex project where requirement changes frequently</li>
+    </ol>
+      <img src="https://www.researchgate.net/profile/Sugeng-Mubaroq/publication/336603302/figure/fig1/AS:814865694351367@1571290529779/Software-development-life-cycle-SDLC-of-waterfall-model-The-Digi-Learnik-application.jpg" alt="alternatetext"> 
+  </ul>
+</div>
+
+<button class="accordion">Iterative</button>
+<div class="panel">
+  <p>Pildiotsingu Iterative programming tulemus
+    In programming specifically, iterative refers to a sequence of instructions or code being repeated until a specific end result is achieved. ... Almost all computer programs are executed by using iterations and loops to execute specific tasks and provide solutions to problems.</p>
+    <img src="https://www.researchgate.net/profile/Dr-Miraz/publication/338911407/figure/fig4/AS:852882240835584@1580354380106/SDLC-Iterative-Model-2.jpg" alt="alternatetext"> 
+
+</div>
+
+<button class="accordion">Prototyping</button>
+<div class="panel">
+  <p>Prototype-based programming is a style of object-based programming where behavior is reused through the process of reusing existing objects that act as prototypes. This model can also be called prototype, prototype-oriented, class-based, or instance-based programming.</p>
+  <img src="https://www.tutorialscampus.com/sdlc/img/prototype-model.png" alt="alternatetext"> 
+
+</div>
+<button class="accordion">Spiral</button>
+<div class="panel">
+  <p>The spiral model is a risk-based software development process model. Based on the unique risk patterns of a given project, the spiral model directs the team to adopt elements of one or more process models, such as an incremental, waterfall, or evolutionary prototype.</p>
+  <img src="https://miro.medium.com/max/500/1*zqWMS6X8CHNErxHqwK4vnw.jpeg" alt="alternatetext"> 
+
+</div>
+<button class="accordion">V-shape</button>
+<div class="panel">
+  <p>In software development, the V-model refers to a development process that can be considered an extension of the Kose model, and is an example of a more general V-model. Instead of moving linearly downwards, the process steps are bent upwards after the coding phase to form a typical V-shape.</p>
+  <img src="https://www.researchgate.net/profile/Dr-Miraz/publication/338710620/figure/fig3/AS:849628610195461@1579578654441/V-Shaped-Model-Sami-2012.jpg" alt="alternatetext"> 
+
+</div>
+
+<button class="accordion">Agile</button>
+<div class="panel">
+  <p>Field development is rapid software development that uses agile methodologies. According to this, project failure is considered to be the most costly aspect of software development, and therefore this type of software development aims to organize the work in a way that would increase the likelihood of success.</p>
+  <img src="https://agiletech.vn/wp-content/uploads/2020/08/agile-software-development-life-cycle-agile-methodology-01.png" alt="alternatetext"> 
+
+</div>
+  </ul>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
